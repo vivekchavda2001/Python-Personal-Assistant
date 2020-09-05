@@ -52,7 +52,7 @@ def process_text(input):
         elif "calculate" in input.lower():
 
             # write your wolframalpha app_id here
-            app_id = "W9442Y-EY56RQ96EP"
+            app_id = ""
             client = wolframalpha.Client(app_id)
 
             indx = input.lower().split().index('calculate')
@@ -61,13 +61,6 @@ def process_text(input):
             answer = next(res.results).text
             assistant_speaks("The answer is " + answer)
             return
-
-        # elif 'open' in input:
-
-        # 	# another function to open
-        # 	# different application availaible
-        # 	open_application(input.lower())
-        # 	return
 
         else:
 
@@ -132,37 +125,6 @@ def search_web(input):
                        '+'.join(input.split()))
 
         return
-
-
-# function used to open application
-# present inside the system.
-# def open_application(input):
-
-# 	if "chrome" in input:
-# 		assistant_speaks("Google Chrome")
-# 		os.startfile('C:\Program Files (x86)\Google\Chrome\Application\chrome.exe')
-# 		return
-
-# 	elif "firefox" in input or "mozilla" in input:
-# 		assistant_speaks("Opening Mozilla Firefox")
-# 		os.startfile('C:\Program Files\Mozilla Firefox\\firefox.exe')
-# 		return
-
-# 	elif "word" in input:
-# 		assistant_speaks("Opening Microsoft Word")
-# 		os.startfile('C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Office 2013\\Word 2013.lnk')
-# 		return
-
-# 	elif "excel" in input:
-# 		assistant_speaks("Opening Microsoft Excel")
-# 		os.startfile('C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Office 2013\\Excel 2013.lnk')
-# 		return
-
-# 	else:
-
-# 		assistant_speaks("Application not available")
-# 		return
-
 
 def get_audio():
 
